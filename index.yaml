@@ -12138,6 +12138,7 @@ entries:
     version: 3.6.000
   rancher-monitoring:
   - annotations:
+      artifacthub.io/license: Apache-2.0
       artifacthub.io/links: |
         - name: Chart Source
           url: https://github.com/prometheus-community/helm-charts
@@ -12148,7 +12149,7 @@ entries:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/deploys-on-os: windows
       catalog.cattle.io/display-name: Monitoring
-      catalog.cattle.io/kube-version: '>= 1.16.0-0 < 1.27.0-0'
+      catalog.cattle.io/kube-version: '>= 1.16.0-0 < 1.28.0-0'
       catalog.cattle.io/namespace: cattle-monitoring-system
       catalog.cattle.io/permits-os: linux,windows
       catalog.cattle.io/provides-gvr: monitoring.coreos.com.prometheus/v1
@@ -12158,10 +12159,10 @@ entries:
       catalog.cattle.io/requests-memory: 4000Mi
       catalog.cattle.io/type: cluster-tool
       catalog.cattle.io/ui-component: monitoring
-      catalog.cattle.io/upstream-version: 19.0.3
+      catalog.cattle.io/upstream-version: 45.31.1
     apiVersion: v2
-    appVersion: 0.59.1
-    created: "2023-09-22T14:33:36.77069096-04:00"
+    appVersion: v0.65.1
+    created: "2023-10-11T13:55:11.06333-07:00"
     dependencies:
     - condition: grafana.enabled
       name: grafana
@@ -12229,23 +12230,21 @@ entries:
     - condition: global.cattle.windows.enabled
       name: windowsExporter
       repository: file://./charts/windowsExporter
-    description: Collects several related Helm charts, Grafana dashboards, and Prometheus
-      rules combined with documentation and scripts to provide easy to operate end-to-end
-      Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
-    digest: 37a837a1091ea9c1a59ec1ce2d039d61b267a1225693c0f1c1bc82a80611a1e0
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: 5227f09a745f360eb283db24e406d97952d91d1442db968894bce5b7e590dd3a
     home: https://github.com/prometheus-operator/kube-prometheus
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
     keywords:
     - operator
     - prometheus
     - kube-prometheus
-    - monitoring
     kubeVersion: '>=1.16.0-0'
     maintainers:
     - email: andrew@quadcorps.co.uk
       name: andrewgkew
-    - email: cedric@desaintmartin.fr
-      name: desaintmartin
     - email: gianrubio@gmail.com
       name: gianrubio
     - email: github.gkarthiks@gmail.com
@@ -12256,19 +12255,16 @@ entries:
       name: scottrigby
     - email: miroslav.hadzhiev@gmail.com
       name: Xtigyro
-    - email: arvind.iyengar@suse.com
-      name: Arvind
-    - email: amangeet.samra@suse.com
-      name: Geet
-      url: https://github.com/geethub97
+    - email: quentin.bisson@gmail.com
+      name: QuentinBisson
     name: rancher-monitoring
     sources:
     - https://github.com/prometheus-community/helm-charts
     - https://github.com/prometheus-operator/kube-prometheus
     type: application
     urls:
-    - assets/rancher-monitoring/rancher-monitoring-103.0.0+up40.1.2.tgz
-    version: 103.0.0+up40.1.2
+    - assets/rancher-monitoring/rancher-monitoring-103.0.0+up45.31.1.tgz
+    version: 103.0.0+up45.31.1
   - annotations:
       artifacthub.io/links: |
         - name: Chart Source
@@ -14415,14 +14411,14 @@ entries:
       catalog.cattle.io/namespace: cattle-monitoring-system
       catalog.cattle.io/release-name: rancher-monitoring-crd
     apiVersion: v1
-    created: "2023-08-14T15:43:06.761124-07:00"
+    created: "2023-10-11T14:13:26.243559-07:00"
     description: Installs the CRDs for rancher-monitoring.
-    digest: bf50d255070f2e75ebba883b3097034d84e4baefae80f8ab99563ccd898e2e5a
+    digest: c3cf84226b09455052a85584868f810006e8ec7f874690a5fcf3dc9751183a91
     name: rancher-monitoring-crd
     type: application
     urls:
-    - assets/rancher-monitoring-crd/rancher-monitoring-crd-103.0.0+up40.1.2.tgz
-    version: 103.0.0+up40.1.2
+    - assets/rancher-monitoring-crd/rancher-monitoring-crd-103.0.0+up45.31.1.tgz
+    version: 103.0.0+up45.31.1
   - annotations:
       catalog.cattle.io/certified: rancher
       catalog.cattle.io/hidden: "true"
